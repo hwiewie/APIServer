@@ -1,0 +1,40 @@
+package replicaset
+
+import (
+	"context"
+
+	"github.com/hwiewie/APIServer/internal/k8sdao"
+)
+
+type ReplicaSet struct {
+	Namespace string
+	Name      string
+	Labels    map[string]string
+}
+
+type ListReplicaSetInput struct {
+	Namespace string
+	Labels    map[string]string
+}
+
+// ListReplicaSet 當前有 Pod 的關聯的 ReplicaSet
+func ListReplicaSet(ctx context.Context, input ListReplicaSetInput) ([]ReplicaSet, error) {
+	selector := k8sdao.ConvertMapToSelector(input.Labels)
+	v1Rs, err := k8sdao.ListReplicaSet(ctx, input.Namespace, selector)
+	if err != nil {
+		return nil, err
+	}
+
+	rs := []ReplicaSet{}
+	for _, item := range v1Rs.Items {
+		if item.Status.FullyLabeledReplicas != 0 {
+			rs = append(rs, ReplicaSet{
+				Namespace: item.Namespace,
+				Name:      item.Name,
+				Labels:    item.Spec.Selector.MatchLabels,
+			})
+		}
+	}
+
+	return rs, nil
+}

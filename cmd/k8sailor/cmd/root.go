@@ -1,0 +1,30 @@
+package cmd
+
+import (
+	"github.com/spf13/cobra"
+)
+
+var rootCmd = &cobra.Command{
+	Use:  "k8sailor",
+	Long: "k8s 管理平台",
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		// 始終顯示幫助信息
+		_ = cmd.Help()
+	},
+	Run: func(cmd *cobra.Command, args []string) {
+		// 什麼也不做
+		// k8s.Connent()
+	},
+}
+
+func init() {
+	// cobrautils.BindFlags(rootCmd, global.Flags)
+
+	rootCmd.AddCommand(cmdHttpserver)
+}
+
+func Execute() {
+	if err := rootCmd.Execute(); err != nil {
+		panic(err)
+	}
+}
