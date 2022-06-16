@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Qihoo360/wayne/src/backend/database/initial"
+	"github.com/hwiewie/APIServer/database/initial"
 )
 
 func main() {

@@ -3,6 +3,7 @@
 package client
 
 import (
+	"context"
 	"fmt"
 
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -36,6 +37,7 @@ func NewResourceHandler(kubeClient *kubernetes.Clientset, cacheFactory *CacheFac
 }
 
 func (h *resourceHandler) Create(kind string, namespace string, object *runtime.Unknown) (*runtime.Unknown, error) {
+	ctx := context.TODO()
 	resource, err := h.getResource(kind)
 	if err != nil {
 		return nil, err
@@ -50,13 +52,13 @@ func (h *resourceHandler) Create(kind string, namespace string, object *runtime.
 		req.Namespace(namespace)
 	}
 	var result runtime.Unknown
-	err = req.Do().Into(&result)
+	err = req.Do(ctx).Into(&result)
 
 	return &result, err
 }
 
 func (h *resourceHandler) Update(kind string, namespace string, name string, object *runtime.Unknown) (*runtime.Unknown, error) {
-
+	ctx := context.TODO()
 	resource, err := h.getResource(kind)
 	if err != nil {
 		return nil, err
@@ -73,13 +75,13 @@ func (h *resourceHandler) Update(kind string, namespace string, name string, obj
 	}
 
 	var result runtime.Unknown
-	err = req.Do().Into(&result)
+	err = req.Do(ctx).Into(&result)
 
 	return &result, err
 }
 
 func (h *resourceHandler) Delete(kind string, namespace string, name string, options *meta_v1.DeleteOptions) error {
-
+	ctx := context.TODO()
 	resource, err := h.getResource(kind)
 	if err != nil {
 		return err
@@ -94,7 +96,7 @@ func (h *resourceHandler) Delete(kind string, namespace string, name string, opt
 		req.Namespace(namespace)
 	}
 
-	return req.Do().Error()
+	return req.Do(ctx).Error()
 }
 
 // Get object from cache

@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "List",
 			Router:           `/`,
@@ -15,7 +15,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "Create",
 			Router:           `/`,
@@ -23,7 +23,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/:id([0-9]+)`,
@@ -31,7 +31,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/:id([0-9]+)`,
@@ -39,7 +39,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "Update",
 			Router:           `/:id([0-9]+)`,
@@ -47,7 +47,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "GetNames",
 			Router:           `/names`,
@@ -55,7 +55,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceController"],
 		beego.ControllerComments{
 			Method:           "UpdateOrders",
 			Router:           `/updateorders`,
@@ -63,7 +63,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"],
 		beego.ControllerComments{
 			Method:           "List",
 			Router:           `/`,
@@ -71,7 +71,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"],
 		beego.ControllerComments{
 			Method:           "Create",
 			Router:           `/`,
@@ -79,7 +79,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/:id([0-9]+)`,
@@ -87,7 +87,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"],
 		beego.ControllerComments{
 			Method:           "Update",
 			Router:           `/:id([0-9]+)`,
@@ -95,7 +95,7 @@ func init() {
 			MethodParams:     param.Make(),
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/Qihoo360/wayne/src/backend/plugins/service/controller:ServiceTplController"],
+	beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"] = append(beego.GlobalControllerRouter["github.com/hwiewie/APIServer/plugins/service/controller:ServiceTplController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/:id([0-9]+)`,

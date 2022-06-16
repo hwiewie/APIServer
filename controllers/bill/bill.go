@@ -2,7 +2,7 @@ package bill
 
 import (
 	"github.com/hwiewie/APIServer/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
+	"github.com/hwiewie/APIServer/models"
 )
 
 type InvoiceResponse struct {
