@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"k8s.io/api/batch/v2alpha1"
+	//"k8s.io/api/batch/v2alpha1"
 
 	"github.com/hwiewie/APIServer/controllers/base"
 	"github.com/hwiewie/APIServer/models"

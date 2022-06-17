@@ -10,7 +10,7 @@ import (
 )
 
 func init() {
-	err := beego.LoadAppConfig("ini", "src/backend/conf/app.conf")
+	err := beego.LoadAppConfig("ini", "APIServer/conf/app.conf")
 	if err != nil {
 		panic(err)
 	}
